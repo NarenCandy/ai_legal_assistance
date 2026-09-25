@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: clearclause
+    env: node
+    buildCommand: npm install && cd frontend && npm install && npm run build && cd ..
+    startCommand: node server.js
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
